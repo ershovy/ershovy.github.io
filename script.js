@@ -216,11 +216,4 @@ window.addEventListener('DOMContentLoaded', () => {
     new CountdownTimer();
 });
 
-
-document.getElementById('rsvpForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('testing');
-    this.reset();
-});
-
 window.timer = new CountdownTimer();
