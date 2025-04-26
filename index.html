@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виталий & Ангелина | 19.06.2025</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat:400,500,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page">
+    <div class="slider" id="slider">
+        <section class="slider__slide hero slider__slide--active">
+            <div class="hero__content">
+                <h1 class="hero__title">Vitaly &amp; Angelina</h1>
+                <div class="hero__containerSubtitle">
+                    <div class="hero__subtitle">Бесконечность не предел...</div>
+                    <div class="hero__date">19.06.2025</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">Наши любимые родные и близкие!</h2>
+                <p class="card__text">19 июня 2025 года для нас особенный день и мы хотим его разделить вместе с вами…
+                </p>
+                <p class="card__signature">С любовью, Виталий и Ангелина ❤️</p>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">Место проведения</h2>
+                <div class="address card__text">ул. Дементьева, 51, Казань</div>
+                <div class="map-container" id="map"></div>
+                <button class="yandex-map-button" onclick="openYandexMaps()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                            fill="currentColor" />
+                    </svg>
+                    Открыть в Яндекс.Картах
+                </button>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">Тайминг</h2>
+                <ul class="timeline">
+                    <li class="timeline__item">
+                        <span class="timeline__time">13:00</span>
+                        <span class="timeline__event">Сбор гостей у загса Чаша (адрес: Бондаренко, 34)</span>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__time">13:45</span>
+                        <span class="timeline__event">Регистрация</span>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__time">14:00</span>
+                        <span class="timeline__event">Фотосессия возле чаши</span>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__time">14:30-17:00</span>
+                        <span class="timeline__event">Поездка по Казани (остановки на различных локациях)</span>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__time">17:00-18:00</span>
+                        <span class="timeline__event">Сбор гостей по адресу: Дементьева, 51</span>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__time">18:00</span>
+                        <span class="timeline__event">Начало банкета</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">Дресс-код</h2>
+                <div class="dress-code">
+                    <p class="card__text">Мы будем признательны, если в своих нарядах вы поддержите цветовую гамму нашей
+                        свадьбы.</p>
+                    <p class="card__text">Для мужчин будет уместным классический образ со светлой рубашкой.</p>
+                    <div class="dress-code__colors">
+                        <div class="color-sample" style="background: #B8A696;"></div>
+                        <div class="color-sample" style="background: #C4BAAE;"></div>
+                        <div class="color-sample" style="background: #F5C7BB;"></div>
+                        <div class="color-sample" style="background: #F4E4DA;"></div>
+                        <div class="color-sample" style="background: #EDEADF;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">Пожалуйста, заполните анкету</h2>
+                <form class="rsvp-form" id="rsvpForm" action="https://submit-form.com/wb6n7mSNM" method="POST">
+                    <div class="form-field">
+                        <label class="form-field__label">Ваши имена</label>
+                        <input type="text" id="names" name="names" class="form-field__input" placeholder="Иван и Мария"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-field__label">Сможете ли вы присутствовать на нашем торжестве?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="attendance" value="yes" required>
+                                Обязательно приду
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="attendance" value="no">
+                                Нет, не смогу
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-field__label">В каком составе вы будете? (Например: я и мой
+                            супруг/партнер)</label>
+                        <input type="text" id="guests" name="guests" class="form-field__input"
+                            placeholder="Состав гостей" required>
+                    </div>
+
+                    <button type="submit" class="form-field__submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="slider__slide">
+            <div class="card">
+                <h2 class="card__title">До свадьбы осталось</h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown__item">
+                        <div class="countdown__number" id="days">0</div>
+                        <div class="countdown__label">дней</div>
+                    </div>
+                    <div class="countdown__item">
+                        <div class="countdown__number" id="hours">0</div>
+                        <div class="countdown__label">часов</div>
+                    </div>
+                    <div class="countdown__item">
+                        <div class="countdown__number" id="minutes">0</div>
+                        <div class="countdown__label">минут</div>
+                    </div>
+                    <div class="countdown__item">
+                        <div class="countdown__number" id="seconds">0</div>
+                        <div class="countdown__label">секунд</div>
+                    </div>
+                </div>
+                <p class="card__text" style="margin-top: 2rem;">Присутствие каждого важно для нас!</p>
+                <p class="card__signature">С любовью, Виталий и Ангелина ❤️</p>
+            </div>
+        </section>
+
+        <nav class="slider-nav" id="sliderNav"></nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+
+</html>
