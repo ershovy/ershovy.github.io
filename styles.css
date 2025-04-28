@@ -223,7 +223,6 @@
     list-style: none;
     width: 100%;
     max-width: 600px;
-    margin: 2rem auto;
     padding: 0;
 }
 
@@ -233,6 +232,10 @@
     align-items: center;
     padding: 1.2rem 0;
     border-bottom: 1px solid rgba(46, 41, 78, 0.1);
+}
+
+.timeline__item:nth-child(6) {
+    border-bottom: none;
 }
 
 .timeline__time {
@@ -813,4 +816,228 @@ input[type=radio] {
 .slider__slide--active .hero__content {
     transform: translateY(0);
     opacity: 1;
+}
+
+
+@media (max-width: 576px) {
+  .card {
+    min-height: auto !important;
+    padding: 20px 15px !important;
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+  }
+
+  .hero__title {
+    padding: 0 15px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr !important;
+    gap: 5px;
+  }
+
+  .timeline__time {
+    font-size: 1.8rem !important;
+  }
+
+  .timeline__event {
+    font-size: 1.4rem !important;
+  }
+
+  .map-container {
+    height: 40vh !important;
+    min-height: 250px !important;
+  }
+
+  .dress-code__colors {
+    flex-wrap: wrap;
+  }
+
+  .rsvp-form {
+    padding: 0 10px;
+  }
+
+  .form-field__input {
+    font-size: 16px !important; /* Улучшаем читаемость */
+  }
+
+
+
+}
+
+@media (max-width: 400px) {
+  .hero__title {
+    font-size: 2.2rem !important;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem !important;
+  }
+
+  .card__title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  .card__text {
+    font-size: 1.4rem !important;
+  }
+
+  .form-field__label {
+    font-size: 1.3rem !important;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.slider__slide {
+  width: 100vw;
+  left: 0;
+}
+
+@media (max-width: 399px) {
+    .timeline__item {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+      padding: 0.8rem 0 !important;
+    }
+  
+    .timeline__time {
+      font-size: 1.6rem !important;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+  
+    .timeline__event {
+      font-size: 1.2rem !important;
+      line-height: 1.3;
+      padding: 0 5px;
+    }
+  }
+  
+  @media (max-width: 399px) {
+    .rsvp-form {
+      padding: 0 5px !important;
+    }
+  
+    .form-field__input {
+      padding: 0.8rem !important;
+      font-size: 14px !important;
+    }
+  
+    .radio-group {
+      gap: 0.5rem !important;
+    }
+  
+    .radio-option {
+      font-size: 1.2rem !important;
+    }
+  
+    .form-field__label {
+      font-size: 1.2rem !important;
+      padding: 0 5px;
+    }
+  
+    .form-field__submit {
+      padding: 0.8rem !important;
+      font-size: 1.2rem !important;
+    }
+  }
+  
+  @media (max-width: 399px) {
+    .card {
+      border-radius: 16px !important;
+      margin: 5px !important;
+      width: calc(100% - 10px) !important;
+      padding: 15px 10px !important;
+    }
+  
+    .card__title {
+      font-size: 1.8rem !important;
+      margin-bottom: 1rem !important;
+      padding: 0 5px;
+    }
+  
+    .card__text {
+      font-size: 1.2rem !important;
+      line-height: 1.3;
+      padding: 0 5px;
+    }
+  }
+
+  .timeline__event {
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+.timeline {
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.timeline__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 0;
+    margin: 0.3rem 0;
+}
+
+.timeline__time {
+    color: #B76E79;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+}
+
+.timeline__event {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    hyphens: auto;
+    word-break: break-word;
+    max-width: 300px;
+}
+
+@media (max-width: 375px) {
+    .card {
+        min-height: auto !important;
+    }
+    
+    .card__title {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .timeline__time {
+        font-size: 1.4rem !important;
+    }
+    
+    .timeline__event {
+        font-size: 1.2rem !important;
+        line-height: 1.2;
+        padding: 0 5px;
+    }
+    
+    .timeline__item {
+        padding: 0.5rem 0 !important;
+        margin: 0.2rem 0 !important;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .timeline__event {
+        font-size: 1.1rem !important;
+    }
+    
+    .timeline__time {
+        font-size: 1.3rem !important;
+    }
 }
