@@ -649,7 +649,7 @@ input[type=radio] {
 }
 
 .slider__slide:nth-child(7) .card__signature {
-    font-family: 'Marck Script', cursive;
+    font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     color: var(--color-accent);
     margin-top: 1rem;
