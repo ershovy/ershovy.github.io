@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     L.marker(coordinates)
         .addTo(map)
-        .bindPopup('Место проведения свадьбы<br>ул. Дементьева, 51')
         .openPopup();
 });
 

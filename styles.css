@@ -189,6 +189,12 @@
     text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+    .card__text {
+        margin-bottom: 0;
+    }
+}
+
 .card__signature {
     font-family: 'Great Vibes', cursive;
     font-size: 2.8rem;
@@ -215,7 +221,6 @@
 .address {
     font-size: 1.3rem;
     text-align: center;
-    margin: 1rem 0;
     font-weight: 500;
 }
 
@@ -334,6 +339,13 @@ input[type=radio] {
     font-size: 1.4rem;
     font-weight: 500;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .form-field__submit {
+        margin-top: 0;
+        padding: 0.7rem !important;
+    }
 }
 
 .form-field__submit:hover {
@@ -500,10 +512,11 @@ input[type=radio] {
     .hero__title {
         font-size: 2.5rem;
         width: 700px;
+        margin-bottom: 200px;
     }
 
     .hero__containerSubtitle {
-        bottom: 30px;
+        bottom: 60px;
     }
 
     .hero__subtitle {
@@ -763,11 +776,17 @@ input[type=radio] {
     font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
-    margin: 1rem auto 0;
+    margin: 0 auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .yandex-map-button {
+        padding: 0.7rem;
+    }
 }
 
 .yandex-map-button:hover {
@@ -858,10 +877,8 @@ input[type=radio] {
   }
 
   .form-field__input {
-    font-size: 16px !important; /* Улучшаем читаемость */
+    font-size: 16px !important;
   }
-
-
 
 }
 
@@ -1005,6 +1022,12 @@ html, body {
     max-width: 300px;
 }
 
+@media screen and (max-width: 800px) {
+    .card__title {
+        margin-bottom: 0 !important;
+    }
+}
+
 @media (max-width: 375px) {
     .card {
         min-height: auto !important;
@@ -1012,7 +1035,7 @@ html, body {
     
     .card__title {
         font-size: 2rem !important;
-        margin-bottom: 1rem !important;
+        margin-bottom: 0 !important;
     }
     
     .timeline__time {
@@ -1026,10 +1049,17 @@ html, body {
     }
     
     .timeline__item {
-        padding: 0.5rem 0 !important;
+        padding: 0.1rem 0 !important;
         margin: 0.2rem 0 !important;
     }
     
+}
+
+@media screen and (max-width: 800px) {
+    .timeline__item {
+        padding: 0.1rem 0 !important;
+        margin: 0.2rem 0 !important;
+    }
 }
 
 @media (max-width: 320px) {
@@ -1041,3 +1071,4 @@ html, body {
         font-size: 1.3rem !important;
     }
 }
+
